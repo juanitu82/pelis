@@ -20,6 +20,10 @@
     "year": 2023
   },
   {
+    "title": "A Brighter Tomorrow",
+    "year": 2023
+  },
+  {
     "title": "A Complete Unknown",
     "year": 2024
   },
@@ -28,7 +32,7 @@
     "year": 2024
   },
   {
-    "title": "A Dogs Purpose",
+    "title": "A Dog's Purpose",
     "year": 2017
   },
   {
@@ -84,10 +88,6 @@
     "year": 2023
   },
   {
-    "title": "Alla Vet",
-    "year": 2018
-  },
-  {
     "title": "Alps",
     "year": 2011
   },
@@ -112,7 +112,7 @@
     "year": 2018
   },
   {
-    "title": "Angelas Ashes",
+    "title": "Angela's Ashes",
     "year": 1999
   },
   {
@@ -140,7 +140,7 @@
     "year": 2001
   },
   {
-    "title": "August Underground Mordum",
+    "title": "August Underground's Mordum",
     "year": 2003
   },
   {
@@ -156,7 +156,7 @@
     "year": 2013
   },
   {
-    "title": "Azrael Angel of Death",
+    "title": "Azrael",
     "year": 2024
   },
   {
@@ -184,7 +184,7 @@
     "year": 2012
   },
   {
-    "title": "Barn (Beware of Children)",
+    "title": "Barn",
     "year": 2019
   },
   {
@@ -204,7 +204,7 @@
     "year": 1988
   },
   {
-    "title": "Before The Devil Knows Youre Dead",
+    "title": "Before The Devil Knows You're Dead",
     "year": 2007
   },
   {
@@ -212,7 +212,7 @@
     "year": 1999
   },
   {
-    "title": "Belle The Dragon And The Freckled Princess",
+    "title": "Belle",
     "year": 2021
   },
   {
@@ -360,7 +360,7 @@
     "year": 2014
   },
   {
-    "title": "Cmon Cmon",
+    "title": "C'mon C'mon",
     "year": 2021
   },
   {
@@ -384,7 +384,7 @@
     "year": 2021
   },
   {
-    "title": "Comunidad",
+    "title": "Common Wealth",
     "year": 2000
   },
   {
@@ -398,6 +398,10 @@
   {
     "title": "Confessions of a Dangerous Mind",
     "year": 2002
+  },
+  {
+    "title": "Consent",
+    "year": 2023
   },
   {
     "title": "Coup",
@@ -444,7 +448,7 @@
     "year": 2018
   },
   {
-    "title": "Cyborg Girl",
+    "title": "Cyborg She",
     "year": 2008
   },
   {
@@ -464,7 +468,7 @@
     "year": 2010
   },
   {
-    "title": "Dasboot",
+    "title": "Das Boot",
     "year": 1981
   },
   {
@@ -532,15 +536,15 @@
     "year": 2001
   },
   {
-    "title": "Dont Let Go",
+    "title": "Don't Let Go",
     "year": 2019
   },
   {
-    "title": "Dont Look Up",
+    "title": "Don't Look Up",
     "year": 2021
   },
   {
-    "title": "Dont Tell A Soul",
+    "title": "Don't Tell A Soul",
     "year": 2020
   },
   {
@@ -564,7 +568,7 @@
     "year": 2024
   },
   {
-    "title": "Emma",
+    "title": "Emma.",
     "year": 2020
   },
   {
@@ -578,6 +582,10 @@
   {
     "title": "Europa Report",
     "year": 2013
+  },
+  {
+    "title": "Everybody Knows",
+    "year": 2018
   },
   {
     "title": "Evil Does Not Exist",
@@ -664,7 +672,7 @@
     "year": 2022
   },
   {
-    "title": "Girl You Know Its True",
+    "title": "Girl You Know It's True",
     "year": 2023
   },
   {
@@ -768,11 +776,7 @@
     "year": 2013
   },
   {
-    "title": "Il Sol Dell'Avvenire",
-    "year": 2023
-  },
-  {
-    "title": "Im Still Here",
+    "title": "I'm Still Here",
     "year": 2024
   },
   {
@@ -800,7 +804,7 @@
     "year": 2023
   },
   {
-    "title": "Jacobs Ladder",
+    "title": "Jacob's Ladder",
     "year": 1990
   },
   {
@@ -828,24 +832,12 @@
     "year": 2024
   },
   {
-    "title": "La Fille de Son Pere",
-    "year": 2023
-  },
-  {
     "title": "La Haine",
     "year": 1995
   },
   {
     "title": "La La Land",
     "year": 2016
-  },
-  {
-    "title": "La otra forma",
-    "year": 2022
-  },
-  {
-    "title": "Le Consentement",
-    "year": 2023
   },
   {
     "title": "Lee",
@@ -868,6 +860,10 @@
     "year": 2002
   },
   {
+    "title": "Life of Brian",
+    "year": 1979
+  },
+  {
     "title": "Looper",
     "year": 2012
   },
@@ -888,7 +884,7 @@
     "year": 2019
   },
   {
-    "title": "M3GAN 2 0",
+    "title": "M3GAN 2.0",
     "year": 2025
   },
   {
@@ -992,12 +988,8 @@
     "year": 2014
   },
   {
-    "title": "Monster A K A Kaibutsu",
+    "title": "Monster",
     "year": 2023
-  },
-  {
-    "title": "Monty Pythons Life of Brian",
-    "year": 1979
   },
   {
     "title": "Moonshot",
@@ -1024,7 +1016,7 @@
     "year": 2015
   },
   {
-    "title": "My Heart Cant Beat Unless You Tell It To",
+    "title": "My Heart Can't Beat Unless You Tell It To",
     "year": 2020
   },
   {
@@ -1048,12 +1040,16 @@
     "year": 2021
   },
   {
-    "title": "no child of mine",
+    "title": "No Child Of Mine",
     "year": 1997
   },
   {
     "title": "No Escape",
     "year": 2015
+  },
+  {
+    "title": "No Love Lost",
+    "year": 2023
   },
   {
     "title": "Nobody Knows",
@@ -1645,6 +1641,10 @@
   {
     "title": "The Novice",
     "year": 2021
+  },
+  {
+    "title": "The Other Shape",
+    "year": 2022
   },
   {
     "title": "The Perfect Host",
