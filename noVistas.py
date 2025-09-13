@@ -20,7 +20,6 @@ paths = {
 
 OUTPUT_FILE = "pelisNoVistas.json"
 
-
 # --- Helpers ---
 def normalizar_nombre(nombre):
     if not nombre or not nombre.strip():
@@ -40,13 +39,13 @@ def normalizar_nombre(nombre):
             return None
         return {"title": titulo}
 
-
 def escanear_directorio_primer_nivel(base_path, exclude_dirs, exclude_files):
     peliculas = []
     if not os.path.exists(base_path):
         return []
     try:
-        for item in os.listdir(base_path):
+        contenido = os.listdir(base_path)
+        for item in contenido:
             item_path = os.path.join(base_path, item)
             if os.path.isdir(item_path) and item.lower() not in [x.lower() for x in exclude_dirs]:
                 peli = normalizar_nombre(item)
@@ -62,10 +61,8 @@ def escanear_directorio_primer_nivel(base_path, exclude_dirs, exclude_files):
         return []
     return peliculas
 
-
 def generar_clave_unica(peli):
     return f"{peli.get('title','').lower().strip()}_{peli.get('year','')}"
-
 
 # --- Main ---
 def main():
@@ -73,7 +70,6 @@ def main():
     for path, config in paths.items():
         todas.extend(escanear_directorio_primer_nivel(path, config["exclude_dirs"], config["exclude_files"]))
 
-    # Eliminar duplicados
     seen, unicas = set(), []
     for peli in todas:
         key = generar_clave_unica(peli)
@@ -83,7 +79,6 @@ def main():
 
     unicas.sort(key=lambda x: x.get("title", "").lower())
 
-    # Cargar versión previa
     prev = []
     if os.path.exists(OUTPUT_FILE):
         with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
@@ -98,30 +93,27 @@ def main():
     agregadas = [new_keys[k] for k in new_keys if k not in prev_keys]
     eliminadas = [prev_keys[k] for k in prev_keys if k not in new_keys]
 
-    # Guardar JSON actualizado
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(unicas, f, ensure_ascii=False, indent=2)
 
-    # --- Resumen de cambios para log ---
+    # Crear resumen sin imprimir emojis (para que Windows no rompa)
     resumen = []
     if agregadas:
-        resumen.append("➕ Agregadas:")
+        resumen.append("Agregadas:")
         for p in agregadas:
             year = f" ({p['year']})" if "year" in p else ""
-            resumen.append(f"   - {p['title']}{year}")
+            resumen.append(f"- {p['title']}{year}")
     if eliminadas:
-        resumen.append("➖ Eliminadas:")
+        resumen.append("Eliminadas:")
         for p in eliminadas:
             year = f" ({p['year']})" if "year" in p else ""
-            resumen.append(f"   - {p['title']}{year}")
-
-    # Si no hubo cambios
+            resumen.append(f"- {p['title']}{year}")
     if not resumen:
-        resumen.append("ℹ️ No hubo cambios en pelisNoVistas.json")
+        resumen.append("No hubo cambios en pelisNoVistas.json")
 
-    # Imprimir resumen (para que auto.py lo capture y guarde en log)
+    # Devuelve el resumen como string para auto.py
     print("\n".join(resumen))
-
 
 if __name__ == "__main__":
     main()
+
