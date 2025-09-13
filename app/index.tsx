@@ -23,12 +23,16 @@ export default function Index() {
     });
   };
 
+  const categoriasGrid = categorias.filter((cat) => cat.key !== "noVistas");
+  const categoriaNoVistas = categorias.find((cat) => cat.key === "noVistas");
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Elige un género</Text>
 
+      {/* Grid con todos los géneros menos NoVistas */}
       <View style={styles.grid}>
-        {categorias.map((cat) => (
+        {categoriasGrid.map((cat) => (
           <TouchableOpacity
             key={cat.key}
             style={[styles.card, { backgroundColor: cat.color }]}
@@ -39,6 +43,19 @@ export default function Index() {
         ))}
       </View>
 
+      {/* Botón NoVistas centrado */}
+      {categoriaNoVistas && (
+        <View style={styles.centeredButton}>
+          <TouchableOpacity
+            style={[styles.card, { backgroundColor: categoriaNoVistas.color }]}
+            onPress={() => goToDetalle("noVistas")}
+          >
+            <Text style={styles.cardText}>{categoriaNoVistas.label}</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
+      {/* Toggle Solo no vistas */}
       <View style={styles.toggleRow}>
         <Text style={styles.toggleText}>Solo no vistas</Text>
         <Switch value={soloNoVistas} onValueChange={setSoloNoVistas} />
@@ -47,7 +64,12 @@ export default function Index() {
   );
 }
 
+
 const styles = StyleSheet.create({
+  centeredButton: {
+  alignItems: "center", // centra horizontalmente
+  marginTop: 15,
+},
   container: {
     flex: 1,
     paddingTop: 60,

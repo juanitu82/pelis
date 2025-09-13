@@ -18,7 +18,7 @@ import {
 } from "react-native";
 
 // const GOOGLE_DRIVE_URL = "https://drive.google.com/uc?export=download&id=1UXf9LAGpfecgzqEt9cy2qp33aXsaF0m7";
-const JSON_URL = `https://raw.githubusercontent.com/juanitu82/pelis/main/lista.json`;
+const JSON_URL = `https://raw.githubusercontent.com/juanitu82/pelis/main/app/peliculas2.json`;
 const JSON_URL_NOVISTAS = `https://raw.githubusercontent.com/juanitu82/pelis/main/pelisNoVistas.json`;
 
 const { width, height } = Dimensions.get("window");
