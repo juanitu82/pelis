@@ -464,7 +464,7 @@
     "year": 1998
   },
   {
-    "title": "Das Letzte Schweigen",
+    "title": "The Silence",
     "year": 2010
   },
   {
@@ -532,7 +532,7 @@
     "year": 2019
   },
   {
-    "title": "Donnie Darko DIRECTORS CUT",
+    "title": "Donnie Darko",
     "year": 2001
   },
   {
@@ -700,6 +700,10 @@
     "year": 2010
   },
   {
+    "title": "Green Border",
+    "year": 2023
+  }
+  {
     "title": "Hannibal",
     "year": 2001
   },
@@ -840,6 +844,10 @@
     "year": 2016
   },
   {
+    "title": "Lady Vengeance",
+    "year": 2005
+  },
+  {
     "title": "Lee",
     "year": 2024
   },
@@ -908,7 +916,7 @@
     "year": 2015
   },
   {
-    "title": "Marley and Me",
+    "title": "Marley & Me",
     "year": 2008
   },
   {
@@ -1056,15 +1064,15 @@
     "year": 2004
   },
   {
-    "title": "Nocturna Lado A La noche del hombre grande",
+    "title": "Nocturna: Side A",
     "year": 2021
   },
   {
-    "title": "Norikos Dinner Table",
+    "title": "Noriko's Dinner Table",
     "year": 2005
   },
   {
-    "title": "Noroi The Curse",
+    "title": "Noroi",
     "year": 2005
   },
   {
@@ -1204,7 +1212,7 @@
     "year": 1998
   },
   {
-    "title": "Ringu 2",
+    "title": "Ring 2",
     "year": 1999
   },
   {
@@ -1264,7 +1272,7 @@
     "year": 1998
   },
   {
-    "title": "Shrews Nest",
+    "title": "Shrew's Nest",
     "year": 2014
   },
   {
@@ -1296,7 +1304,7 @@
     "year": 2024
   },
   {
-    "title": "Spirited Away (El Viaje de chihiro)",
+    "title": "Spirited Away",
     "year": 2001
   },
   {
@@ -1316,7 +1324,7 @@
     "year": 2012
   },
   {
-    "title": "Stephen Kings Storm of the Century S01 1080p HULU WEBRip AAC2 0 x264-NOGRP[rartv]"
+    "title": "Storm of the Century 1999"
   },
   {
     "title": "Stowaway",
@@ -1375,10 +1383,6 @@
     "year": 2016
   },
   {
-    "title": "Sympathy For Lady Vengeance",
-    "year": 2005
-  },
-  {
     "title": "Symptoms",
     "year": 1974
   },
@@ -1425,10 +1429,6 @@
   {
     "title": "The Big Lebowski",
     "year": 1998
-  },
-  {
-    "title": "The Bombardment",
-    "year": 2021
   },
   {
     "title": "The Bridge on the River Kwai",
@@ -1499,7 +1499,7 @@
     "year": 1995
   },
   {
-    "title": "The Dead Dont Hurt",
+    "title": "The Dead Don't Hurt",
     "year": 2023
   },
   {
@@ -1682,6 +1682,10 @@
     "title": "The Secret Life of Walter Mitty",
     "year": 2013
   },
+   {
+    "title": "The Shadow in My Eye",
+    "year": 2021
+  },
   {
     "title": "The Shrine",
     "year": 2010
@@ -1696,10 +1700,6 @@
   },
   {
     "title": "The Skin I Live In",
-    "year": 2011
-  },
-  {
-    "title": "The Snowtown Murders",
     "year": 2011
   },
   {
@@ -1859,7 +1859,7 @@
     "year": 2003
   },
   {
-    "title": "Were All Going to the Worlds Fair",
+    "title": "We're All Going to the World's Fair",
     "year": 2021
   },
   {
@@ -1875,7 +1875,7 @@
     "year": 2023
   },
   {
-    "title": "Whats In A Name",
+    "title": "What's In A Name",
     "year": 2012
   },
   {
@@ -1893,9 +1893,5 @@
   {
     "title": "Young Frankenstein",
     "year": 1974
-  },
-  {
-    "title": "Zielona granica",
-    "year": 2023
   }
 ]
