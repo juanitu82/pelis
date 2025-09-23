@@ -1,11 +1,31 @@
 [
   {
+    "title": "13",
+    "year": 2005
+  },
+  {
+    "title": "13 Game Of Death",
+    "year": 2006
+  },
+  {
     "title": "3-Iron",
     "year": 2004
   },
   {
     "title": "A Complete Unknown",
     "year": 2024
+  },
+  {
+    "title": "A Desert",
+    "year": 2024
+  },
+  {
+    "title": "A Serbian Film",
+    "year": 2010
+  },
+  {
+    "title": "After Yang",
+    "year": 2021
   },
   {
     "title": "Aftersun",
@@ -56,8 +76,16 @@
     "year": 2024
   },
   {
+    "title": "Asteroid City",
+    "year": 2023
+  },
+  {
     "title": "Atonement",
     "year": 2007
+  },
+  {
+    "title": "Avenged",
+    "year": 2013
   },
   {
     "title": "Baby Blues",
@@ -434,9 +462,6 @@
   {
     "title": "Novocaine",
     "year": 2025
-  },
-  {
-    "title": "Nueva carpeta"
   },
   {
     "title": "Oculus",
