@@ -103,6 +103,10 @@
     "year": 2019
   },
   {
+    "title": "Barbarian",
+    "year": 2022
+  },
+  {
     "title": "Battle Of The Sexes",
     "year": 2017
   },
@@ -228,6 +232,10 @@
   {
     "title": "Dachra",
     "year": 2018
+  },
+  {
+    "title": "Dancer In The Dark",
+    "year": 2000
   },
   {
     "title": "Dead Birds",
@@ -462,6 +470,10 @@
     "year": 2015
   },
   {
+    "title": "Nope",
+    "year": 2022
+  },
+  {
     "title": "Nosferatu",
     "year": 2024
   },
@@ -472,6 +484,10 @@
   {
     "title": "Oculus",
     "year": 2013
+  },
+  {
+    "title": "One Hour Photo",
+    "year": 2002
   },
   {
     "title": "Parasite",
@@ -542,15 +558,16 @@
     "year": 2016
   },
   {
-    "title": "subs"
-  },
-  {
     "title": "Sujo",
     "year": 2024
   },
   {
     "title": "Sully",
     "year": 2016
+  },
+  {
+    "title": "Suspiria",
+    "year": 2018
   },
   {
     "title": "Swan Song",
@@ -599,10 +616,6 @@
   {
     "title": "The Commitments",
     "year": 1991
-  },
-  {
-    "title": "The Damned",
-    "year": 2024
   },
   {
     "title": "The Day Of The Beast",
@@ -729,8 +742,16 @@
     "year": 2001
   },
   {
+    "title": "Titane",
+    "year": 2021
+  },
+  {
     "title": "Together",
     "year": 2025
+  },
+  {
+    "title": "Tropic Thunder",
+    "year": 2008
   },
   {
     "title": "Tucker And Dale Vs Evil",
