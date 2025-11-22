@@ -73,7 +73,7 @@
       { "title": "Top Gun: Maverick", "year": 2022, "genre": "Accion" },
       { "title": "Transformers", "year": 2007, "genre": "Accion" },
       { "title": "True Lies", "year": 1994, "genre": "Accion" },
-      { "title": "Warrior", "year": 2011, "genre": "Accion" },
+      { "title": "Warrior", "year": 2011, "genre": "Accion" }
   ],
    "argentinas": [
       { "title": "9 Reinas", "year": 2000, "genre": "Argentina" },
@@ -88,7 +88,7 @@
       { "title": "Elefante Blanco", "year": 2012, "genre": "Argentina" },
       { "title": "Luna de Avellaneda", "year": 2004, "genre": "Argentina" },
       { "title": "Tiempo de Valientes", "year": 2005, "genre": "Argentina" },
-      { "title": "Wakolda", "year": 2013, "genre": "Argentina" },
+      { "title": "Wakolda", "year": 2013, "genre": "Argentina" }
   ],
   "comedias": [
       { "title": "About Time", "year": 2013, "genre": "Comedia" },
@@ -147,7 +147,7 @@
       { "title": "Wayne's World", "year": 1992, "genre": "Comedia" },
       { "title": "Wedding Crashers", "year": 2005, "genre": "Comedia" },
       { "title": "When Harry Met Sally...", "year": 1989, "genre": "Comedia" },
-      { "title": "Zoolander", "year": 2001, "genre": "Comedia" },
+      { "title": "Zoolander", "year": 2001, "genre": "Comedia" }
   ],
   "fantastico": [
       { "title": "The Curious Case of Benjamin Button", "year": 2008, "genre": "Fantastico"},
@@ -190,7 +190,7 @@
       { "title": "The Count of Monte Cristo", "year": 2002, "genre": "Aventura" },
       { "title": "The Neverending Story", "year": 1984, "genre": "Aventura" },
       { "title": "The Physician", "year": 2013, "genre": "Aventura" },
-      { "title": "Troy", "year": 2004, "genre": "Aventura" },
+      { "title": "Troy", "year": 2004, "genre": "Aventura" }
   ],
   "csFiccion": [
       { "title": "Alien", "year": 1979, "genre": "Ciencia Ficcion" },
@@ -378,7 +378,7 @@
       { "title": "Rocky IV", "year": 1985, "genre": "Deporte" },
       { "title": "Southpaw", "year": 2015, "genre": "Deporte" },
       { "title": "The Fighter", "year": 2010, "genre": "Deporte" },
-      { "title": "Trouble with the Curve", "year": 2012, "genre": "Deporte" },
+      { "title": "Trouble with the Curve", "year": 2012, "genre": "Deporte" }
   ],
   "policial": [
       { "title": "I See You", "year": 2019, "genre": "Policial" },
@@ -417,7 +417,7 @@
       { "title": "The Insider", "year": 1999, "genre": "Biopics"},
       { "title": "The Social Network", "year": 2010, "genre": "Biopics" },
       { "title": "The Soloist", "year": 2009, "genre": "Biopics" },
-      { "title": "The Theory of Everything", "year": 2014, "genre": "Biopics" },
+      { "title": "The Theory of Everything", "year": 2014, "genre": "Biopics" }
   ],
   "musica":  [
       { "title": "8 Mile", "year": 2002, "genre": "Musica" },
@@ -648,7 +648,7 @@
       { "title": "Underwater", "year": 2020, "genre": "Terror" },
       { "title": "Under the Skin", "year": 2013, "genre": "Terror" },
       { "title": "Vermines (Infested)", "year": 2023, "genre": "Terror" },
-      { "title": "Wolf Creek", "year": 2005, "genre": "Terror" },
+      { "title": "Wolf Creek", "year": 2005, "genre": "Terror" }
   ],
 "todas": [
       { "title": "300", "year": 2006, "genre": "Accion" },
@@ -821,7 +821,7 @@
       { "title": "Star Wars: Episode VI - Return of the Jedi", "year": 1983, "genre": "Fantastico" },
       { "title": "Underworld", "year": 2003, "genre": "Fantastico" },
       { "title": "Van Helsing", "year": 2004, "genre": "Fantastico" },
-      { "title": "Warcraft", "year": 2016, "genre": "Fantastico" }
+      { "title": "Warcraft", "year": 2016, "genre": "Fantastico" },
       { "title": "Far and Away", "year": 1992, "genre": "Aventura" },
       { "title": "Indiana Jones and the Last Crusade", "year": 1989, "genre": "Aventura" },
       { "title": "Indiana Jones and the Temple of Doom", "year": 1984, "genre": "Aventura" },
@@ -874,7 +874,7 @@
       { "title": "The Terminator", "year": 1984, "genre": "Ciencia Ficcion" },
       { "title": "The Vast of Night", "year": 2020, "genre": "Ciencia Ficcion"},
       { "title": "Triangle", "year": 2009, "genre": "Ciencia Ficcion" },
-      { "title": "Upgrade", "year": 2018, "genre": "Ciencia Ficcion" }
+      { "title": "Upgrade", "year": 2018, "genre": "Ciencia Ficcion" },
       { "title": "8MM", "year": 1999, "genre": "Thriller"},
       { "title": "A Bronx Tale", "year": 1993, "genre": "Thriller" },
       { "title": "A Perfect Murder", "year": 1998, "genre": "Thriller" },
@@ -997,7 +997,7 @@
       { "title": "Wild Things", "year": 1998, "genre": "Thriller" },
       { "title": "Wind River", "year": 2017, "genre": "Thriller" },
       { "title": "Victoria", "year": 2015, "genre": "Thriller" },
-      { "title": "Zodiac", "year": 2007, "genre": "Policial" }
+      { "title": "Zodiac", "year": 2007, "genre": "Policial" },
       { "title": "Any Given Sunday", "year": 1999, "genre": "Deporte" },
       { "title": "Challengers", "year": 2024, "genre": "Deporte" },
       { "title": "Cinderella Man", "year": 2005, "genre": "Deporte" }, 
@@ -1024,7 +1024,7 @@
       { "title": "The Departed", "year": 2006, "genre": "Policial" },
       { "title": "The Little Things", "year": 2021, "genre": "Policial" },
       { "title": "The Stranger", "year": 2022, "genre": "Policial" },
-      { "title": "The Treatment", "year": 2014, "genre": "Policial" }
+      { "title": "The Treatment", "year": 2014, "genre": "Policial" },
       { "title": "A Beautiful Mind", "year": 2001, "genre": "Biopics" },
       { "title": "American Gangster", "year": 2007, "genre": "Biopics" },
       { "title": "Blow", "year": 2001, "genre": "Biopics" },
@@ -1059,9 +1059,9 @@
       { "title": "Shine", "year": 1996, "genre": "Musica" },
       { "title": "Sound of Metal", "year": 2020, "genre": "Musica"},
       { "title": "Whiplash", "year": 2014, "genre": "Musica" },
-      { "title": "Wild Rose", "year": 2018, "genre": "Musica" }
+      { "title": "Wild Rose", "year": 2018, "genre": "Musica" },
       { "title": "Chinatown", "year": 1974, "genre": "Cine Noir"},
-      { "title": "Drive", "year": 2011, "genre": "Cine Noir"}
+      { "title": "Drive", "year": 2011, "genre": "Cine Noir"},
       { "title": "1917", "year": 2019, "genre": "Belica" },
       { "title": "All Quiet on the Western Front", "year": 2022, "genre": "Belica" },
       { "title": "Apocalypse Now", "year": 1979, "genre": "Belica" },
@@ -1081,7 +1081,7 @@
       { "title": "The Thin Red Line", "year": 1998, "genre": "Belica" },
       { "title": "U-571", "year": 2000, "genre": "Belica" },
       { "title": "Unbroken", "year": 2014, "genre": "Belica" },
-      { "title": "Valkyrie", "year": 2008, "genre": "Belica" }
+      { "title": "Valkyrie", "year": 2008, "genre": "Belica" },
       { "title": "50/50", "year": 2011, "genre": "Drama" },
       { "title": "A Good Person", "year": 2023, "genre": "Drama"},
       { "title": "American Beauty", "year": 1999, "genre": "Drama" },   
@@ -1169,7 +1169,7 @@
       { "title": "We Live in Time", "year": 2024, "genre": "Drama"},
       { "title": "Where the Crawdads sing", "year": 2022, "genre": "Drama"},
       { "title": "Womb", "year": 2010, "genre": "Drama"},
-      { "title": "Y tu Mama Tambien", "year": 2001, "genre": "Drama"}
+      { "title": "Y tu Mama Tambien", "year": 2001, "genre": "Drama"},
       { "title": "10 Cloverfield Lane", "year": 2016, "genre": "Terror" },  
       { "title": "13 Sins", "year": 2014, "genre": "Terror" },
       { "title": "A cure for Wellness", "year": 2016, "genre": "Terror" },
@@ -1270,7 +1270,7 @@
       { "title": "Underwater", "year": 2020, "genre": "Terror" },
       { "title": "Under the Skin", "year": 2013, "genre": "Terror" },
       { "title": "Vermines (Infested)", "year": 2023, "genre": "Terror" },
-      { "title": "Wolf Creek", "year": 2005, "genre": "Terror" },
+      { "title": "Wolf Creek", "year": 2005, "genre": "Terror" }
 ]
 }
   
