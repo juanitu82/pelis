@@ -2,6 +2,11 @@
   "expo": {
     "name": "miapp4",
     "slug": "miapp4",
+     "repositories": [
+      {
+        "url": "https://github.com/juanitu82/pelis"
+      }
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon2.png",
