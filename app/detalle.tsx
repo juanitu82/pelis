@@ -1,30 +1,26 @@
-
-
-  // OMDb API Key (gratis registrándote en http://www.omdbapi.com/apikey.aspx)
-//   const API_KEY = "6143b05e";
+// @ts-nocheck
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
 import {
-    ActivityIndicator,
-    Alert,
-    Dimensions,
-    Image,
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View
+  ActivityIndicator,
+  Alert,
+  Dimensions,
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from "react-native";
 
-// const GOOGLE_DRIVE_URL = "https://drive.google.com/uc?export=download&id=1UXf9LAGpfecgzqEt9cy2qp33aXsaF0m7";
 const JSON_URL = `https://raw.githubusercontent.com/juanitu82/pelis/main/app/peliculas2.json`;
 const JSON_URL_NOVISTAS = `https://raw.githubusercontent.com/juanitu82/pelis/main/pelisNoVistas.json`;
+const JSON_URL_BLURAY = `https://raw.githubusercontent.com/juanitu82/pelis/main/app/peliculasBluray.json`;
 
 const { width, height } = Dimensions.get("window");
 
-// 1) PONÉ TU API KEY ACÁ (la de http://www.omdbapi.com/apikey.aspx)
-const OMDB_API_KEY = "6143b05e";
+const OMDB_API_KEY = "62b9c4bf";
 
 // --- Tipos ---
 type LocalMovie = {
@@ -45,66 +41,235 @@ type OmdbMovie = {
   Error?: string;
 };
 
-const VISTAS_KEY = "vistas__ids"; // guardamos IDs "Title (Year)"
+const VISTAS_KEY = "vistas__ids";
 
-// ID estable para marcar vistas
 const buildId = (t?: string, y?: string | number) =>
   t ? `${t}${y ? ` (${y})` : ""}` : "";
+
+function shuffle<T>(array: T[]): T[] {
+  if (!Array.isArray(array)) {
+    console.warn('shuffle recibió un valor que no es array:', array);
+    return [];
+  }
+  
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
 // --- Historial global para evitar repeticiones ---
 let historial: string[] = [];
 const HISTORIAL_MAX = 20;
 
-
-// --- Componente ---
 export default function Detalle() {
   const router = useRouter();
   const { genero, soloNoVistas } = useLocalSearchParams<{
     genero?: string;
-    soloNoVistas?: string; // "true" | "false"
+    soloNoVistas?: string;
   }>();
 
-  // Estados movidos DENTRO del componente
+  // Estados
   const [basePeliculas, setBasePeliculas] = useState({ todas: [] });
   const [noVistas, setNoVistas] = useState<LocalMovie[]>([]);
+  const [bluray, setBluray] = useState<LocalMovie[]>([]);
   const [errorCarga, setErrorCarga] = useState<string | null>(null);
   const [seleccion, setSeleccion] = useState<LocalMovie | null>(null);
   const [info, setInfo] = useState<OmdbMovie | null>(null);
   const [cargando, setCargando] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Cargar JSON externo en el montaje
+  // ========================================
+  // PRIMER useEffect: CARGAR JSON AL MONTAR (CON CACHÉ)
+  // ========================================
   useEffect(() => {
+    const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 horas
+    const CACHE_KEYS = {
+      peliculas: 'cache_peliculas',
+      noVistas: 'cache_noVistas',
+      bluray: 'cache_bluray',
+      timestamp: 'cache_timestamp'
+    };
+
     const cargar = async () => {
       try {
-        // cargar lista principal
-      const res1 = await fetch(JSON_URL);
-      const data1 = await res1.json();
-      setBasePeliculas(data1 || { todas: [] });
+        // Verificar si tenemos caché válido
+        const cachedTimestamp = await AsyncStorage.getItem(CACHE_KEYS.timestamp);
+        const now = Date.now();
+        const cacheIsValid = cachedTimestamp && (now - parseInt(cachedTimestamp)) < CACHE_DURATION;
 
-      // cargar no vistas
-      const res2 = await fetch(JSON_URL_NOVISTAS);
-      const data2 = await res2.json();
-      setNoVistas(data2 || []);
+        if (cacheIsValid) {
+          console.log('✅ Usando datos del caché');
+          
+          // Cargar desde caché
+          const cachedPeliculas = await AsyncStorage.getItem(CACHE_KEYS.peliculas);
+          const cachedNoVistas = await AsyncStorage.getItem(CACHE_KEYS.noVistas);
+          const cachedBluray = await AsyncStorage.getItem(CACHE_KEYS.bluray);
+
+          if (cachedPeliculas && cachedNoVistas && cachedBluray) {
+            const data1 = JSON.parse(cachedPeliculas);
+            const data2 = JSON.parse(cachedNoVistas);
+            const data3 = JSON.parse(cachedBluray);
+
+            let todasPelis: LocalMovie[] = [];
+            Object.keys(data1).forEach((key) => {
+              const genreMovies = data1[key];
+              if (Array.isArray(genreMovies)) {
+                todasPelis = todasPelis.concat(genreMovies as LocalMovie[]);
+              }
+            });
+
+            setBasePeliculas({ ...data1, todas: shuffle(todasPelis) });
+            setNoVistas(shuffle(data2));
+            
+            let todasBluray: LocalMovie[] = [];
+            if (typeof data3 === 'object' && data3 !== null) {
+              Object.keys(data3).forEach((key) => {
+                const genreMovies = data3[key];
+                if (Array.isArray(genreMovies)) {
+                  todasBluray = todasBluray.concat(genreMovies as LocalMovie[]);
+                }
+              });
+            }
+            setBluray(shuffle(todasBluray));
+            
+            console.log('✅ Datos cargados desde caché exitosamente');
+            return;
+          }
+        }
+
+        // Si no hay caché válido, cargar desde red
+        console.log('🌐 Cargando datos desde la red...');
+
+        // Cargar lista principal (estructura: {accion: [...], scifi: [...], ...})
+        const res1 = await fetch(JSON_URL);
+        if (!res1.ok) throw new Error(`Error HTTP: ${res1.status}`);
+        const data1: any = await res1.json();
+        console.log('✅ Data principal cargada:', data1);
+        
+        // Crear array "todas" combinando todos los géneros
+        let todasPelis: LocalMovie[] = [];
+        Object.keys(data1).forEach((key) => {
+          const genreMovies = data1[key];
+          if (Array.isArray(genreMovies)) {
+            todasPelis = todasPelis.concat(genreMovies as LocalMovie[]);
+          }
+        });
+        
+        setBasePeliculas({
+          ...data1,
+          todas: shuffle(todasPelis)
+        });
+
+        // Cargar no vistas (array directo)
+        const res2 = await fetch(JSON_URL_NOVISTAS);
+        if (!res2.ok) throw new Error(`Error HTTP: ${res2.status}`);
+        const data2: any = await res2.json();
+        console.log('✅ No vistas cargadas:', data2);
+        const noVistasArray: LocalMovie[] = Array.isArray(data2) ? data2 : [];
+        setNoVistas(shuffle(noVistasArray));
+
+        // Cargar Bluray (estructura: {accion: [...], scifi: [...], ...})
+        console.log('🔵 Intentando cargar Bluray desde:', JSON_URL_BLURAY);
+        const res3 = await fetch(JSON_URL_BLURAY);
+        console.log('🔵 Respuesta Bluray status:', res3.status);
+        if (!res3.ok) throw new Error(`Error HTTP Bluray: ${res3.status}`);
+        const data3: any = await res3.json();
+        console.log('🔵 Bluray cargado (raw):', data3);
+        
+        // Extraer todas las películas de todos los géneros
+        let todasBluray: LocalMovie[] = [];
+        if (typeof data3 === 'object' && data3 !== null) {
+          Object.keys(data3).forEach((key) => {
+            const genreMovies = data3[key];
+            if (Array.isArray(genreMovies)) {
+              todasBluray = todasBluray.concat(genreMovies as LocalMovie[]);
+            }
+          });
+        }
+        
+        console.log('🔵 Total películas Bluray:', todasBluray.length);
+        setBluray(shuffle(todasBluray));
+
+        // Guardar en caché
+        await AsyncStorage.setItem(CACHE_KEYS.peliculas, JSON.stringify(data1));
+        await AsyncStorage.setItem(CACHE_KEYS.noVistas, JSON.stringify(data2));
+        await AsyncStorage.setItem(CACHE_KEYS.bluray, JSON.stringify(data3));
+        await AsyncStorage.setItem(CACHE_KEYS.timestamp, String(now));
+        console.log('💾 Datos guardados en caché');
+        
       } catch (e) {
-        console.log("Error cargando JSON externo:", e);
-        setErrorCarga("No se pudo cargar la base de datos.");
+        console.error("❌ Error completo cargando JSON:", e);
+        const errorMsg = e instanceof Error ? e.message : String(e);
+        
+        // Si falla la red, intentar usar caché aunque esté expirado
+        console.log('⚠️ Intentando usar caché expirado como fallback...');
+        const cachedPeliculas = await AsyncStorage.getItem(CACHE_KEYS.peliculas);
+        const cachedNoVistas = await AsyncStorage.getItem(CACHE_KEYS.noVistas);
+        const cachedBluray = await AsyncStorage.getItem(CACHE_KEYS.bluray);
+
+        if (cachedPeliculas && cachedNoVistas) {
+          try {
+            const data1 = JSON.parse(cachedPeliculas);
+            const data2 = JSON.parse(cachedNoVistas);
+            const data3 = cachedBluray ? JSON.parse(cachedBluray) : { accion: [] };
+
+            let todasPelis: LocalMovie[] = [];
+            Object.keys(data1).forEach((key) => {
+              const genreMovies = data1[key];
+              if (Array.isArray(genreMovies)) {
+                todasPelis = todasPelis.concat(genreMovies as LocalMovie[]);
+              }
+            });
+
+            setBasePeliculas({ ...data1, todas: shuffle(todasPelis) });
+            setNoVistas(shuffle(data2));
+            
+            let todasBluray: LocalMovie[] = [];
+            if (typeof data3 === 'object' && data3 !== null) {
+              Object.keys(data3).forEach((key) => {
+                const genreMovies = data3[key];
+                if (Array.isArray(genreMovies)) {
+                  todasBluray = todasBluray.concat(genreMovies as LocalMovie[]);
+                }
+              });
+            }
+            setBluray(shuffle(todasBluray));
+            
+            console.log('✅ Usando caché expirado (modo offline)');
+            return;
+          } catch (cacheError) {
+            console.error('❌ Error usando caché:', cacheError);
+          }
+        }
+
+        setErrorCarga(`No se pudo cargar la base de datos: ${errorMsg}`);
       }
     };
     cargar();
-  }, []);
+  }, []); // ← Solo se ejecuta al montar el componente
 
-  // Lista del género elegido (o "todas")
+  // Lista del género elegido
   const listaGenero = useMemo<LocalMovie[]>(() => {
+    console.log('🎬 Calculando listaGenero para:', genero);
+    
     if (genero === "noVistas") {
-        return noVistas;
+      console.log('📝 NoVistas length:', noVistas.length);
+      return noVistas;
+    }
+    
+    if (genero === "bluray") {
+      console.log('🔵 Bluray length:', bluray.length);
+      return bluray;
     }
 
-    if (!basePeliculas || !basePeliculas.todas) return []; // si todavía no cargó
+    if (!basePeliculas || !basePeliculas.todas) return [];
     const key = (genero || "todas") as keyof typeof basePeliculas;
     const lista = basePeliculas[key] as LocalMovie[] | undefined;
     return Array.isArray(lista) ? lista : basePeliculas.todas;
-  }, [genero, basePeliculas, noVistas]);
+  }, [genero, basePeliculas, noVistas, bluray]);
 
   // Cargar vistas desde storage
   const getVistas = async (): Promise<string[]> => {
@@ -119,8 +284,28 @@ export default function Detalle() {
   const setVistas = async (arr: string[]) => {
     try {
       await AsyncStorage.setItem(VISTAS_KEY, JSON.stringify(arr));
+    } catch {}
+  };
+
+  const LAST_PICK_KEY = "ultima_pelicula";
+
+  const guardarUltima = async (context: string, id: string) => {
+    try {
+      const raw = await AsyncStorage.getItem(LAST_PICK_KEY);
+      const data = raw ? JSON.parse(raw) : {};
+      data[context] = id;
+      await AsyncStorage.setItem(LAST_PICK_KEY, JSON.stringify(data));
+    } catch {}
+  };
+
+  const cargarUltima = async (context: string): Promise<string | null> => {
+    try {
+      const raw = await AsyncStorage.getItem(LAST_PICK_KEY);
+      if (!raw) return null;
+      const data = JSON.parse(raw);
+      return data[context] || null;
     } catch {
-      // nada
+      return null;
     }
   };
 
@@ -152,21 +337,24 @@ export default function Detalle() {
       do {
         pick = lista[Math.floor(Math.random() * lista.length)];
         intento++;
-        if (intento > 50) break; // seguridad
+        if (intento > 50) break;
       } while (historial.includes(buildId(pick.title, pick.year)));
 
-      // Actualizar historial
       const id = buildId(pick.title, pick.year);
+
+      // Actualizar historial
       historial.push(id);
       if (historial.length > HISTORIAL_MAX) {
-        historial.shift(); // elimina el más viejo
+        historial.shift();
       }
 
       setSeleccion(pick);
+      const context = genero === "noVistas" ? "noVistas" : genero === "bluray" ? "bluray" : genero || "todas";
+      guardarUltima(context, id);
 
       // Buscar datos en OMDb
       if (!OMDB_API_KEY) {
-        setError("Falta configurar OMDb API Key. Editá OMDB_API_KEY en detalle.tsx.");
+        setError("Falta configurar OMDb API Key.");
         setCargando(false);
         return;
       }
@@ -215,14 +403,66 @@ export default function Detalle() {
     Alert.alert("Listo", "Se marcó como vista 👌");
   };
 
+  // =============================================
+  // SEGUNDO useEffect: INICIALIZAR AL CAMBIAR DE GÉNERO
+  // =============================================
   useEffect(() => {
-    if (basePeliculas.todas.length > 0) {
-      elegirPelicula();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [genero, soloNoVistas, basePeliculas]);
+    const inicializar = async () => {
+      // Verificar que haya datos cargados
+      const hayDatos = 
+        (genero === "noVistas" && noVistas.length > 0) ||
+        (genero === "bluray" && bluray.length > 0) ||
+        (genero !== "noVistas" && genero !== "bluray" && basePeliculas.todas && basePeliculas.todas.length > 0);
 
-  // Mostrar error de carga si no se pudo cargar la base de datos
+      if (!hayDatos) {
+        console.log('⏳ Esperando datos para género:', genero);
+        return;
+      }
+
+      console.log('✅ Inicializando género:', genero, 'con', listaGenero.length, 'películas');
+
+      const context = genero === "noVistas" ? "noVistas" : genero === "bluray" ? "bluray" : genero || "todas";
+
+      let lista = [...listaGenero];
+      if (soloNoVistas === "true") {
+        const vistas = await getVistas();
+        lista = lista.filter((p) => !vistas.includes(buildId(p.title, p.year)));
+      }
+
+      if (lista.length === 0) {
+        setCargando(false);
+        setError("No hay películas disponibles.");
+        return;
+      }
+
+      // Buscar última guardada
+      const lastId = await cargarUltima(context);
+      const ultima = lista.find(p => buildId(p.title, p.year) === lastId);
+
+      if (ultima) {
+        setSeleccion(ultima);
+        setCargando(true);
+        const url =
+          `https://www.omdbapi.com/?t=${encodeURIComponent(ultima.title)}` +
+          (ultima.year ? `&y=${encodeURIComponent(String(ultima.year))}` : "") +
+          `&plot=short&apikey=${OMDB_API_KEY}`;
+        try {
+          const res = await fetch(url);
+          const data: OmdbMovie = await res.json();
+          if (data.Response !== "False") setInfo(data);
+        } catch (err) {
+          console.error("Error fetching última película:", err);
+        }
+        setCargando(false);
+      } else {
+        // No hay última guardada, elegir random
+        await elegirPelicula();
+      }
+    };
+
+    inicializar();
+  }, [genero, soloNoVistas, basePeliculas.todas, noVistas, bluray]);
+
   if (errorCarga) {
     return (
       <SafeAreaView style={styles.loadingContainer}>
@@ -231,7 +471,6 @@ export default function Detalle() {
     );
   }
 
-  // --- UI ---
   if (cargando) {
     return (
       <SafeAreaView style={styles.loadingContainer}>
@@ -242,7 +481,7 @@ export default function Detalle() {
   }
 
   return (
-    <SafeAreaView style={styles.container} >
+    <SafeAreaView style={styles.container}>
       <View style={styles.card}>
         {info?.Poster && info.Poster !== "N/A" ? (
           <Image source={{ uri: info.Poster }} style={styles.poster} />
@@ -293,7 +532,6 @@ export default function Detalle() {
   );
 }
 
-// --- Estilos minimalistas oscuros ---
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -308,7 +546,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   loadingText: { marginTop: 12, color: "#aaa" },
-
   card: {
     backgroundColor: "#1E1E1E",
     borderRadius: 14,
@@ -360,7 +597,6 @@ const styles = StyleSheet.create({
     color: "#ffb74d",
     textAlign: "center",
   },
-
   buttons: {
     flexDirection: "row",
     justifyContent: "space-between",

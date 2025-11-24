@@ -4,12 +4,13 @@ import { StyleSheet, Switch, Text, TouchableOpacity, View } from "react-native";
 
 const categorias = [
   { key: "terror", label: "Terror", color: "#e74c3c" },
-  { key: "scifi", label: "Sci-Fi", color: "#3498db" },
+  { key: "csFiccion", label: "Sci-Fi", color: "#3498db" }, // ← Cambié "scifi" a "csFiccion"
   { key: "thriller", label: "Thriller", color: "#9b59b6" },
   { key: "accion", label: "Acción", color: "#f39c12" },
   { key: "drama", label: "Drama", color: "#2ecc71" },
   { key: "todas", label: "Todas", color: "#34495e" },
-  { key: "noVistas", label: "NoVistas", color: "#f1c40f" },
+  { key: "noVistas", label: "No Vistas", color: "#f1c40f" },
+  { key: "bluray", label: "Bluray", color: "#1abc9c" },
 ];
 
 export default function Index() {
@@ -23,14 +24,18 @@ export default function Index() {
     });
   };
 
-  const categoriasGrid = categorias.filter((cat) => cat.key !== "noVistas");
+  // Filtramos NoVistas y Bluray para ponerlas en fila separada
+  const categoriasGrid = categorias.filter(
+    (cat) => cat.key !== "noVistas" && cat.key !== "bluray"
+  );
   const categoriaNoVistas = categorias.find((cat) => cat.key === "noVistas");
+  const categoriaBluray = categorias.find((cat) => cat.key === "bluray");
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Elige un género</Text>
 
-      {/* Grid con todos los géneros menos NoVistas */}
+      {/* Grid con todos los géneros menos NoVistas y Bluray */}
       <View style={styles.grid}>
         {categoriasGrid.map((cat) => (
           <TouchableOpacity
@@ -43,17 +48,26 @@ export default function Index() {
         ))}
       </View>
 
-      {/* Botón NoVistas centrado */}
-      {categoriaNoVistas && (
-        <View style={styles.centeredButton}>
+      {/* Fila con NoVistas y Bluray lado a lado */}
+      <View style={styles.bottomRow}>
+        {categoriaNoVistas && (
           <TouchableOpacity
-            style={[styles.card, { backgroundColor: categoriaNoVistas.color }]}
+            style={[styles.card, styles.halfCard, { backgroundColor: categoriaNoVistas.color }]}
             onPress={() => goToDetalle("noVistas")}
           >
             <Text style={styles.cardText}>{categoriaNoVistas.label}</Text>
           </TouchableOpacity>
-        </View>
-      )}
+        )}
+        
+        {categoriaBluray && (
+          <TouchableOpacity
+            style={[styles.card, styles.halfCard, { backgroundColor: categoriaBluray.color }]}
+            onPress={() => goToDetalle("bluray")}
+          >
+            <Text style={styles.cardText}>{categoriaBluray.label}</Text>
+          </TouchableOpacity>
+        )}
+      </View>
 
       {/* Toggle Solo no vistas */}
       <View style={styles.toggleRow}>
@@ -64,12 +78,7 @@ export default function Index() {
   );
 }
 
-
 const styles = StyleSheet.create({
-  centeredButton: {
-  alignItems: "center", // centra horizontalmente
-  marginTop: 15,
-},
   container: {
     flex: 1,
     paddingTop: 60,
@@ -101,6 +110,14 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 5,
   },
+  halfCard: {
+    width: "47%",
+  },
+  bottomRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 0,
+  },
   cardText: {
     color: "#fff",
     fontSize: 18,
@@ -118,5 +135,3 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 });
-
-
