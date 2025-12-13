@@ -60,6 +60,10 @@
     "year": 2009
   },
   {
+    "title": "A Special Day",
+    "year": 1977
+  },
+  {
     "title": "About Dry Grasses",
     "year": 2023
   },
@@ -176,10 +180,6 @@
     "year": 2013
   },
   {
-    "title": "Azrael",
-    "year": 2024
-  },
-  {
     "title": "Baby Blues",
     "year": 2008
   },
@@ -194,6 +194,10 @@
   {
     "title": "Bad Luck Banging Or Loony Porn",
     "year": 2021
+  },
+  {
+    "title": "Baraka",
+    "year": 1992
   },
   {
     "title": "Barbara",
@@ -232,6 +236,10 @@
     "year": 1999
   },
   {
+    "title": "Belen",
+    "year": 2025
+  },
+  {
     "title": "Belle",
     "year": 2021
   },
@@ -248,12 +256,20 @@
     "year": 2024
   },
   {
+    "title": "Beyond The Black Rainbow",
+    "year": 2010
+  },
+  {
     "title": "Big Bad Wolves",
     "year": 2013
   },
   {
     "title": "Bird",
     "year": 2024
+  },
+  {
+    "title": "Black Mountain Side",
+    "year": 2014
   },
   {
     "title": "Black Phone 2",
@@ -278,10 +294,6 @@
   {
     "title": "Blue Ruin",
     "year": 2013
-  },
-  {
-    "title": "Bone Lake",
-    "year": 2024
   },
   {
     "title": "Border",
@@ -333,6 +345,10 @@
   },
   {
     "title": "Cargo",
+    "year": 2009
+  },
+  {
+    "title": "Case39",
     "year": 2009
   },
   {
@@ -476,6 +492,10 @@
     "year": 2000
   },
   {
+    "title": "Dances with Wolves",
+    "year": 1990
+  },
+  {
     "title": "Dark City",
     "year": 1998
   },
@@ -500,6 +520,10 @@
     "year": 2003
   },
   {
+    "title": "Dead Mail",
+    "year": 2024
+  },
+  {
     "title": "Decision To Leave",
     "year": 2022
   },
@@ -522,6 +546,10 @@
   {
     "title": "Detention",
     "year": 2011
+  },
+  {
+    "title": "Die My Love",
+    "year": 2025
   },
   {
     "title": "Disco Boy",
@@ -580,6 +608,10 @@
     "year": 2018
   },
   {
+    "title": "Elite Squad",
+    "year": 2007
+  },
+  {
     "title": "Emilia Perez",
     "year": 2024
   },
@@ -626,6 +658,14 @@
   {
     "title": "False Positive",
     "year": 2021
+  },
+  {
+    "title": "Fanny And Alexander",
+    "year": 1982
+  },
+  {
+    "title": "Farewell My Concubine",
+    "year": 1993
   },
   {
     "title": "Fargo",
@@ -712,8 +752,16 @@
     "year": 2010
   },
   {
+    "title": "Hachi A Dogs Tale",
+    "year": 2009
+  },
+  {
     "title": "Halloween",
     "year": 1978
+  },
+  {
+    "title": "Hamilton",
+    "year": 2020
   },
   {
     "title": "Hannibal",
@@ -804,6 +852,14 @@
     "year": 2023
   },
   {
+    "title": "In The Bedroom",
+    "year": 2001
+  },
+  {
+    "title": "In The Name Of The Father",
+    "year": 1993
+  },
+  {
     "title": "Incredible But True",
     "year": 2022
   },
@@ -828,6 +884,14 @@
     "year": 2024
   },
   {
+    "title": "K-PAX",
+    "year": 2001
+  },
+  {
+    "title": "Kill The Jockey",
+    "year": 2024
+  },
+  {
     "title": "Killers Of The Flower Moon",
     "year": 2023
   },
@@ -842,6 +906,10 @@
   {
     "title": "La Cocina",
     "year": 2024
+  },
+  {
+    "title": "La Dolce Vita",
+    "year": 1960
   },
   {
     "title": "La Haine",
@@ -898,6 +966,10 @@
   {
     "title": "Lilya 4 ever",
     "year": 2002
+  },
+  {
+    "title": "Lion",
+    "year": 2016
   },
   {
     "title": "Looper",
@@ -1024,6 +1096,10 @@
     "year": 2023
   },
   {
+    "title": "Monster's Ball",
+    "year": 2001
+  },
+  {
     "title": "Moonshot",
     "year": 2009
   },
@@ -1132,6 +1208,10 @@
     "year": 2001
   },
   {
+    "title": "One Battle After Another",
+    "year": 2025
+  },
+  {
     "title": "One Hour Photo",
     "year": 2002
   },
@@ -1161,6 +1241,10 @@
   },
   {
     "title": "Paris Texas",
+    "year": 1984
+  },
+  {
+    "title": "Paris, Texas",
     "year": 1984
   },
   {
@@ -1304,12 +1388,24 @@
     "year": 2002
   },
   {
+    "title": "Sentimental Value",
+    "year": 2025
+  },
+  {
     "title": "September 5",
     "year": 2024
   },
   {
+    "title": "Serendipity",
+    "year": 2001
+  },
+  {
     "title": "Serpents Lair",
     "year": 1995
+  },
+  {
+    "title": "Session 9",
+    "year": 2001
   },
   {
     "title": "Severance",
@@ -1318,6 +1414,10 @@
   {
     "title": "Shakespeare In Love",
     "year": 1998
+  },
+  {
+    "title": "Shelby Oaks",
+    "year": 2024
   },
   {
     "title": "Shrews Nest",
@@ -1479,6 +1579,10 @@
     "year": 1997
   },
   {
+    "title": "The Best Of Youth",
+    "year": 2003
+  },
+  {
     "title": "The Big Lebowski",
     "year": 1998
   },
@@ -1607,6 +1711,10 @@
     "year": 2025
   },
   {
+    "title": "The Great Beauty",
+    "year": 2013
+  },
+  {
     "title": "The Great Escape",
     "year": 1963
   },
@@ -1671,6 +1779,10 @@
     "year": 2010
   },
   {
+    "title": "The Man Who Wasn't There",
+    "year": 2001
+  },
+  {
     "title": "The Midnight Meat Train",
     "year": 2008
   },
@@ -1697,6 +1809,10 @@
   {
     "title": "The Place Beyond the Pines",
     "year": 2012
+  },
+  {
+    "title": "The Pledge",
+    "year": 2001
   },
   {
     "title": "The Promised Land",
@@ -1787,6 +1903,10 @@
     "year": 2011
   },
   {
+    "title": "The Ugly Stepsister",
+    "year": 2025
+  },
+  {
     "title": "The Vanishing",
     "year": 2018
   },
@@ -1871,6 +1991,10 @@
     "year": 1976
   },
   {
+    "title": "Una Jirafa En El Balcon",
+    "year": 2024
+  },
+  {
     "title": "Uncut Gems",
     "year": 2019
   },
@@ -1881,6 +2005,14 @@
   {
     "title": "Under the Skin",
     "year": 2013
+  },
+  {
+    "title": "Unforgiven",
+    "year": 1992
+  },
+  {
+    "title": "Untraceable",
+    "year": 2008
   },
   {
     "title": "Up",
