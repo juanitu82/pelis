@@ -40,6 +40,10 @@
     "year": 2014
   },
   {
+    "title": "A King And His Movie",
+    "year": 1986
+  },
+  {
     "title": "A Man Called Otto",
     "year": 2022
   },
@@ -108,6 +112,10 @@
     "year": 2023
   },
   {
+    "title": "Alpha",
+    "year": 2025
+  },
+  {
     "title": "Alps",
     "year": 2011
   },
@@ -142,6 +150,10 @@
   {
     "title": "Apples",
     "year": 2020
+  },
+  {
+    "title": "Arbitrage",
+    "year": 2012
   },
   {
     "title": "Ares",
@@ -292,10 +304,6 @@
     "year": 2013
   },
   {
-    "title": "Blue Ruin",
-    "year": 2013
-  },
-  {
     "title": "Border",
     "year": 2018
   },
@@ -324,10 +332,6 @@
     "year": 2016
   },
   {
-    "title": "Bring Her Back",
-    "year": 2025
-  },
-  {
     "title": "Bring Them Down",
     "year": 2024
   },
@@ -336,8 +340,16 @@
     "year": 2004
   },
   {
+    "title": "Bugonia",
+    "year": 2025
+  },
+  {
     "title": "Cabrini",
     "year": 2024
+  },
+  {
+    "title": "Camila",
+    "year": 1984
   },
   {
     "title": "Cannibal Holocaust",
@@ -596,6 +608,10 @@
     "year": 2009
   },
   {
+    "title": "Dreams",
+    "year": 2024
+  },
+  {
     "title": "Drive My Car",
     "year": 2021
   },
@@ -604,8 +620,23 @@
     "year": 2025
   },
   {
+    "title": "Eden",
+    "year": 2024
+  },
+  {
     "title": "Eighth Grade",
     "year": 2018
+  },
+  {
+    "title": "EL ACTO EN CUESTIÓN -",
+    "year": 1993
+  },
+  {
+    "title": "El Bonaerense (HD"
+  },
+  {
+    "title": "El estudiante Santiago Mitre",
+    "year": 2011
   },
   {
     "title": "Elite Squad",
@@ -656,6 +687,10 @@
     "year": 2007
   },
   {
+    "title": "Extraordinary Stories",
+    "year": 2008
+  },
+  {
     "title": "False Positive",
     "year": 2021
   },
@@ -688,16 +723,16 @@
     "year": 2024
   },
   {
-    "title": "Four Good Days",
-    "year": 2020
-  },
-  {
     "title": "Freaks",
     "year": 2018
   },
   {
     "title": "Fright Night",
     "year": 1985
+  },
+  {
+    "title": "Garden Of Eden",
+    "year": 2025
   },
   {
     "title": "Ghost World",
@@ -820,6 +855,10 @@
     "year": 1977
   },
   {
+    "title": "House Of Sayuri",
+    "year": 2024
+  },
+  {
     "title": "Housebound",
     "year": 2014
   },
@@ -872,8 +911,20 @@
     "year": 2023
   },
   {
+    "title": "It Ends",
+    "year": 2025
+  },
+  {
+    "title": "It Was Just An Accident",
+    "year": 2025
+  },
+  {
     "title": "Jacob's Ladder",
     "year": 1990
+  },
+  {
+    "title": "Jauja",
+    "year": 2014
   },
   {
     "title": "Jeremiah Johnson",
@@ -888,8 +939,16 @@
     "year": 2001
   },
   {
+    "title": "Keeper",
+    "year": 2025
+  },
+  {
     "title": "Kill The Jockey",
     "year": 2024
+  },
+  {
+    "title": "Kill Them Softly",
+    "year": 2012
   },
   {
     "title": "Killers Of The Flower Moon",
@@ -904,12 +963,20 @@
     "year": 1979
   },
   {
+    "title": "La Cienaga",
+    "year": 2001
+  },
+  {
     "title": "La Cocina",
     "year": 2024
   },
   {
     "title": "La Dolce Vita",
     "year": 1960
+  },
+  {
+    "title": "La Flor",
+    "year": 2018
   },
   {
     "title": "La Haine",
@@ -920,8 +987,11 @@
     "year": 2016
   },
   {
-    "title": "La Mujer De La Fila",
-    "year": 2025
+    "title": "La mujer sin cabeza (Lucrecia Martel) ¦ Cine Argentino 4k"
+  },
+  {
+    "title": "La Niña Santa",
+    "year": 2004
   },
   {
     "title": "La otra forma",
@@ -980,6 +1050,10 @@
     "year": 2013
   },
   {
+    "title": "Los Muertos",
+    "year": 2004
+  },
+  {
     "title": "Love Me",
     "year": 2024
   },
@@ -1026,6 +1100,10 @@
   {
     "title": "Martin Eden",
     "year": 2019
+  },
+  {
+    "title": "MARTÍN (HACHE)",
+    "year": 1997
   },
   {
     "title": "Mary and Max",
@@ -1120,6 +1198,10 @@
     "year": 2009
   },
   {
+    "title": "Mundo Grúa (Pablo Trapero -",
+    "year": 1999
+  },
+  {
     "title": "Mustang",
     "year": 2015
   },
@@ -1152,6 +1234,10 @@
     "year": 2015
   },
   {
+    "title": "No habra mas pena ni olvido",
+    "year": 1983
+  },
+  {
     "title": "No Love Lost",
     "year": 2023
   },
@@ -1174,10 +1260,6 @@
   {
     "title": "Noroi",
     "year": 2005
-  },
-  {
-    "title": "Nosferatu",
-    "year": 2024
   },
   {
     "title": "Novocaine",
@@ -1252,6 +1334,10 @@
     "year": 2024
   },
   {
+    "title": "Paulina",
+    "year": 2015
+  },
+  {
     "title": "Perfect Blue",
     "year": 1997
   },
@@ -1260,12 +1346,24 @@
     "year": 2023
   },
   {
+    "title": "Peter Pans Neverland Nightmare",
+    "year": 2025
+  },
+  {
     "title": "Picnic At Hanging Rock",
     "year": 1975
   },
   {
     "title": "Piranha",
     "year": 1978
+  },
+  {
+    "title": "Pizza Beer And Cigarettes",
+    "year": 1998
+  },
+  {
+    "title": "Plata dulce",
+    "year": 1982
   },
   {
     "title": "Playground",
@@ -1340,6 +1438,10 @@
     "year": 2023
   },
   {
+    "title": "Rojo",
+    "year": 2018
+  },
+  {
     "title": "Roma",
     "year": 2018
   },
@@ -1378,10 +1480,6 @@
   {
     "title": "Searching",
     "year": 2018
-  },
-  {
-    "title": "Second Victims",
-    "year": 2025
   },
   {
     "title": "Secretary",
@@ -1424,8 +1522,20 @@
     "year": 2014
   },
   {
+    "title": "Sidewalls",
+    "year": 2011
+  },
+  {
     "title": "Silk",
     "year": 2006
+  },
+  {
+    "title": "Silvia Prieto",
+    "year": 1999
+  },
+  {
+    "title": "Sirat",
+    "year": 2025
   },
   {
     "title": "Skinamarink",
@@ -1444,8 +1554,16 @@
     "year": 2023
   },
   {
+    "title": "Sol de otoño",
+    "year": 1996
+  },
+  {
     "title": "Sorority Row",
     "year": 2009
+  },
+  {
+    "title": "Sorry Baby",
+    "year": 2025
   },
   {
     "title": "Spaceman",
@@ -1477,6 +1595,10 @@
   {
     "title": "Stowaway",
     "year": 2021
+  },
+  {
+    "title": "Strange Harvest",
+    "year": 2024
   },
   {
     "title": "Strangled",
@@ -1511,6 +1633,10 @@
     "year": 2001
   },
   {
+    "title": "Sur",
+    "year": 1988
+  },
+  {
     "title": "Surge",
     "year": 2020
   },
@@ -1541,6 +1667,10 @@
   {
     "title": "System Crasher",
     "year": 2019
+  },
+  {
+    "title": "Tango Feroz",
+    "year": 1993
   },
   {
     "title": "Tau",
@@ -1645,6 +1775,10 @@
   {
     "title": "The Crow",
     "year": 1994
+  },
+  {
+    "title": "The Dark Side Of The Heart",
+    "year": 1992
   },
   {
     "title": "The Day Of The Beast",
@@ -1755,10 +1889,6 @@
     "year": 2000
   },
   {
-    "title": "The Last Exorcism",
-    "year": 2010
-  },
-  {
     "title": "The Last House on the Left",
     "year": 1972
   },
@@ -1771,8 +1901,8 @@
     "year": 1977
   },
   {
-    "title": "The Long Walk",
-    "year": 2025
+    "title": "The Lovely Bones",
+    "year": 2009
   },
   {
     "title": "The Man From Nowhere",
@@ -1781,6 +1911,10 @@
   {
     "title": "The Man Who Wasn't There",
     "year": 2001
+  },
+  {
+    "title": "The Mastermind",
+    "year": 2025
   },
   {
     "title": "The Midnight Meat Train",
@@ -1803,6 +1937,10 @@
     "year": 2021
   },
   {
+    "title": "The Official Story",
+    "year": 1985
+  },
+  {
     "title": "The Perks Of Being A Wallflower",
     "year": 2012
   },
@@ -1819,12 +1957,12 @@
     "year": 2023
   },
   {
-    "title": "The Room Next Door",
+    "title": "The Rule Of Jenny Pen",
     "year": 2024
   },
   {
-    "title": "The Rule Of Jenny Pen",
-    "year": 2024
+    "title": "The Running Man",
+    "year": 2025
   },
   {
     "title": "The Science Of Sleep",
@@ -1845,10 +1983,6 @@
   {
     "title": "The Shrine",
     "year": 2010
-  },
-  {
-    "title": "The Shrouds",
-    "year": 2024
   },
   {
     "title": "The Silence of the Lambs",
@@ -1893,6 +2027,10 @@
   {
     "title": "The Thin Red Line",
     "year": 1998
+  },
+  {
+    "title": "The Things You Kill",
+    "year": 2025
   },
   {
     "title": "The Transfiguration",
@@ -1951,6 +2089,10 @@
     "year": 2021
   },
   {
+    "title": "Tiempo de revancha",
+    "year": 1981
+  },
+  {
     "title": "Titane",
     "year": 2021
   },
@@ -1991,12 +2133,12 @@
     "year": 1976
   },
   {
-    "title": "Una Jirafa En El Balcon",
-    "year": 2024
+    "title": "Un Lugar en el Mundo",
+    "year": 1992
   },
   {
-    "title": "Uncut Gems",
-    "year": 2019
+    "title": "Una Jirafa En El Balcon",
+    "year": 2024
   },
   {
     "title": "Under the Silver Lake",
@@ -2035,6 +2177,10 @@
     "year": 2022
   },
   {
+    "title": "Warfare",
+    "year": 2025
+  },
+  {
     "title": "Wasp",
     "year": 2003
   },
@@ -2067,8 +2213,8 @@
     "year": 2023
   },
   {
-    "title": "Wolf Creek 2",
-    "year": 2013
+    "title": "Wild Tales",
+    "year": 2014
   },
   {
     "title": "You Were Never Really Here",
@@ -2077,5 +2223,13 @@
   {
     "title": "Young Frankenstein",
     "year": 1974
+  },
+  {
+    "title": "Zama",
+    "year": 2017
+  },
+  {
+    "title": "Últimos días de la víctima - Adolfo Aristarain",
+    "year": 1982
   }
 ]
